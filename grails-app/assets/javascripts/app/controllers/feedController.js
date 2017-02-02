@@ -1,7 +1,16 @@
-angular.module('app').controller('feedController', function ($resource, $scope) {
+angular.module('app').controller('feedController',
+    function ($resource, $scope, testService, config) {
 
-  var Restaurant = $resource('/api/restaurants/:restaurantId', {restaurantId: '@id'});
+        $scope.restaurants = [];
 
-  $scope.restaurants = Restaurant.query();
+        $scope.init = function () {
+            $scope.listRestaurants();
+        }
+        $scope.listRestaurants = function () {
+            testService.getAll(config.Server_URL + config.appName +  "/api/restaurant/list")
+                .then(function (data) {
+                    $scope.restaurants = data;
+                })
+        }
 
-});
+    });

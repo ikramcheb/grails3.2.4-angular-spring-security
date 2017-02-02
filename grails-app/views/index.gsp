@@ -13,7 +13,6 @@
 <div class="container">
 
   <ng-include src="'/app/globalnav.html'"></ng-include>
-
   <div ng-view></div>
 
 </div>

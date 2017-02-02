@@ -23,7 +23,7 @@ angular.module('app').factory('securityService', ['$http', '$rootScope', '$locat
 
   service.login = function (username, password) {
     var loginPayload = {username: username, password: password};
-    return $http.post('/api/login', loginPayload).then(loginSuccess, loginFailure);
+    return $http.post('/RestaurantApp/api/login', loginPayload).then(loginSuccess, loginFailure);
   };
 
   service.currentUser = function () {

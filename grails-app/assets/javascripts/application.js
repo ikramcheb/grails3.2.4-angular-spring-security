@@ -1,10 +1,4 @@
-// This is a manifest file that'll be compiled into application.js.
-//
-// Any JavaScript file within this directory can be referenced here using a relative path.
-//
-// You're free to add application-wide JavaScript to this file, but it's generally better
-// to create separate JavaScript files as needed.
-//
+//= wrapped
 //= require ../bower/jquery/dist/jquery.js
 //= require ../bower/bootstrap.js
 //= require ../bower/angular/angular.js
@@ -36,7 +30,7 @@ angular.module('app', ['ngRoute', 'tmh.dynamicLocale','pascalprecht.translate', 
     'ngProgress', 'ngCookies', 'angular.filter', 'ngFileSaver', 'cgNotify',
     'angularXml2json', 'toggle-switch','webStorageModule'])
     .constant('config', {
-    appName: 'Portalesp',
+    appName: 'RestaurantApp',
     Server_URL: 'http://localhost:9191',
     TIME_OUT: 1800000
 });

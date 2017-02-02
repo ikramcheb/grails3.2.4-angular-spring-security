@@ -1,6 +1,6 @@
 grails.plugin.springsecurity.filterChain.chainMap = [
 
-    //Stateless chain
+   // Stateless chain
     [
         pattern: '/api/**',
         filters: 'JOINED_FILTERS,-anonymousAuthenticationFilter,-exceptionTranslationFilter,-authenticationProcessingFilter,-securityContextPersistenceFilter,-rememberMeAuthenticationFilter'
@@ -20,6 +20,7 @@ grails.plugin.springsecurity.authority.className = 'grails.security.Role'
 grails.plugin.springsecurity.securityConfigType = 'InterceptUrlMap'
 grails.plugin.springsecurity.interceptUrlMap = [
     [
-        [pattern: '/api/restaurants/**', access: ['ROLE_READ']]
+        [pattern: '/api/**', access: ['ROLE_READ']],
+//        [pattern: '/api/restaurantsList', access: ['ROLE_READ']]
     ]
 ]

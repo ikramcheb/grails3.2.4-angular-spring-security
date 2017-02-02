@@ -68,7 +68,7 @@ grails:
 
 ---
 server:
-  contextPath: /RestaurantApp
+  contextPath: /Portalesp
   port: 9191
 
 ---

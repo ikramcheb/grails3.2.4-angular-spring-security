@@ -33,4 +33,9 @@ class User {
 
   static constraints = {
   }
+  static mapping = {
+    version(false)
+    id generator: 'native', params: [sequence: 'USER_SEQ']
+    table("USERS")
+  }
 }
